@@ -1145,6 +1145,9 @@ const VideoCard = forwardRef<VideoCardHandle, VideoCardProps>(
                 }}
               >
                 {actualTitle}
+                {` ${Math.floor(play_time / 60)}:${Math.floor(play_time % 60)
+                  .toString()
+                  .padStart(2, '0')}`}
                 <div
                   className='absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800'
                   style={
