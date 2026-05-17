@@ -37,6 +37,11 @@ export function GlobalErrorIndicator() {
         setCurrentError(newError);
       }
 
+      setTimeout(() => {
+        handleClose();
+      }, 5000); // 5秒后自动关闭
+
+
       setIsVisible(true);
     };
 
