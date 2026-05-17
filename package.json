@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "pnpm gen:manifest && next dev -H 0.0.0.0",
-    "build": "pnpm gen:manifest && next build",
+    "dev": "npm run gen:manifest && next dev -H 0.0.0.0",
+    "build": "npm run gen:manifest && next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "eslint src --fix && pnpm format",
+    "lint:fix": "eslint src --fix && npm run format",
     "lint:strict": "eslint --max-warnings=0 src",
     "typecheck": "tsc --noEmit --incremental false",
     "test:watch": "jest --watch",
@@ -15,8 +15,7 @@
     "format": "prettier -w .",
     "format:check": "prettier -c .",
     "gen:manifest": "node scripts/generate-manifest.js",
-    "postbuild": "echo 'Build completed - sitemap generation disabled'",
-    "prepare": "husky install"
+    "postbuild": "echo 'Build completed - sitemap generation disabled'"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
@@ -83,12 +82,7 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "eslint --max-warnings=0",
-      "prettier -w"
-    ],
-    "**/*.{json,css,scss,md,webmanifest}": [
-      "prettier -w"
+      "eslint --max-warnings=0"
     ]
-  },
-  "packageManager": "pnpm@10.14.0"
+  }
 }

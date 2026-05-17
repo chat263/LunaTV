@@ -55,7 +55,7 @@ const intervalId = setInterval(() => {
   req.setTimeout(2000, () => {
     req.destroy();
   });
-}, 2000);
+}, 3000);
 
 // 执行 cron 任务的函数
 function executeCronJob() {
