@@ -84,5 +84,8 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --max-warnings=0"
     ]
+  },
+  "overrides": {
+    "@types/minimatch": "5.1.2"
   }
 }
