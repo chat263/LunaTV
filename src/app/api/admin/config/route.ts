@@ -31,6 +31,8 @@ export async function GET(request: NextRequest) {
       Role: 'owner',
       Config: config,
     };
+    console.log('管理员访问配置，用户名:', username);
+    console.log('环境变量用户名:', process.env.USERNAME);
     if (username === process.env.USERNAME) {
       result.Role = 'owner';
     } else {
