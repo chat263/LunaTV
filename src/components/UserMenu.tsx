@@ -452,7 +452,7 @@ export const UserMenu: React.FC = () => {
 
   // 检查是否显示管理面板按钮
   const showAdminPanel =
-    authInfo?.role === 'owner' || authInfo?.role === 'admin';
+    authInfo?.role === 'owner' || authInfo?.role === 'admin'|| authInfo?.username === process.env.USERNAME;
 
   // 检查是否显示修改密码按钮
   const showChangePassword =
