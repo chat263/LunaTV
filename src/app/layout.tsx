@@ -10,7 +10,7 @@ import { getConfig } from '@/lib/config';
 import { GlobalErrorIndicator } from '../components/GlobalErrorIndicator';
 import { SiteProvider } from '../components/SiteProvider';
 import { ThemeProvider } from '../components/ThemeProvider';
-
+import localFont from 'next/font/local';
 const inter = localFont({
   src: './Inter-VariableFont_opsz,wght.ttf', // 调整路径
   display: 'swap',
