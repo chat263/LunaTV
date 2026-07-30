@@ -13,7 +13,7 @@ import { ThemeProvider } from '../components/ThemeProvider';
 
 const inter = Inter({
   subsets: ['latin'],        // 根据需要添加 'chinese' 等
-  weight: ['100', '200', ..., '900'], // 或 'variable'
+  weight: ['100', '200', '300', '400','500', '600', '700', '800', '900'], // 或 'variable'
   display: 'swap',
   variable: '--font-inter',   // 可选，用于 CSS variable
 });
