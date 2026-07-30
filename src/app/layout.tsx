@@ -11,11 +11,11 @@ import { GlobalErrorIndicator } from '../components/GlobalErrorIndicator';
 import { SiteProvider } from '../components/SiteProvider';
 import { ThemeProvider } from '../components/ThemeProvider';
 
-const inter = Inter({
-  subsets: ['latin'],        // 根据需要添加 'chinese' 等
-  weight: ['100', '200', '300', '400','500', '600', '700', '800', '900'], // 或 'variable'
+const inter = localFont({
+  src: './Inter-VariableFont_opsz,wght.ttf', // 调整路径
   display: 'swap',
-  variable: '--font-inter',   // 可选，用于 CSS variable
+  variable: '--font-inter', // 如果用 CSS variable
+  // subsets removed: Local font config does not accept `subsets` option
 });
 export const dynamic = 'force-dynamic';
 
